@@ -3,9 +3,8 @@ $(document).ready(function() {
     // init controller
     var controller = new ScrollMagic.Controller();
 
-    var tween1 = new TweenMax.to('#section-1', 1.5, {
-        backgroundColor: 'red',
-        color: 'white'
+    var tween1 = new TweenMax.to('#section-1', 3, {
+        transform: 'translateY(50vh)'
     });
     var tween2 = new TweenMax.to('#section-2', 1.5, {
         backgroundColor: 'red',
