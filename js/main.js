@@ -3,13 +3,32 @@ $(document).ready(function() {
     // init controller
     var controller = new ScrollMagic.Controller();
 
-    // create a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: '#section-2',
-        duration: 500, // the scene should last for a scroll distance of 100px
-        offset: 300 // start this scene after scrolling for 50px
+    var tween2 = new TweenMax.to('#section-2', 1.5, {
+        backgroundColor: 'red',
+        color: 'white'
+    });
+    var tween3 = new TweenMax.to('#section-3', 1.5, {
+        fontSize: '62px'
+    });
+    var tween4 = new TweenMax.to('#section-4', 1.5, {
+        backgroundColor: 'red',
+        color: 'white'
+    });
+
+    var containerScene = new ScrollMagic.Scene({
+        triggerElement: '#section-2'
     })
-        .setPin('#section-2') // pins the element for the the scene's duration
-        .addTo(controller); // assign the scene to the controller
+    .setTween(tween2)
+    .addTo(controller);
+    var containerScene = new ScrollMagic.Scene({
+        triggerElement: '#section-3'
+    })
+    .setTween(tween3)
+    .addTo(controller);
+    var containerScene = new ScrollMagic.Scene({
+        triggerElement: '#section-4'
+    })
+    .setTween(tween4)
+    .addTo(controller);
 });
 
