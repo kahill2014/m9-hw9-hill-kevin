@@ -1,6 +1,5 @@
-// Initialize the scrollmagic plugin
 $(document).ready(function() {
-    // init controller
+    // Initialize controller
     var controller = new ScrollMagic.Controller();
 
     // Initialize scene 1
